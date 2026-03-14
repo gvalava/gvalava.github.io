@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    text-align: justify;
+    margin: 1em;
+    display: grid;
+    gap: 1em;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    grid-template-columns: 1fr;
+}
+
+/* Responsive Web Design: Change grid layout for wider screens */
+@media (min-width: 6in) {
+    body {
+        grid-template-areas:
+            "header header"
+            "nav    aside"
+            "main   aside"
+            "footer footer";
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+img {
+    width: 100%;
+    max-width: 4.5in;
+    height: auto;
+    filter: sepia(100%);
+}
+
+img:hover {
+    filter: sepia(0%);
+}
+
+button:hover {
+    background-color: maroon;
+    color: white;
+}
